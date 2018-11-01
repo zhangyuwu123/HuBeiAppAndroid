@@ -543,6 +543,7 @@ const styles = StyleSheet.create({
     marginLeft: (Dimensions.get('window').width - (Dimensions.get('window').width - 50)) / 2,
     marginTop: 10,
     paddingLeft: 10,
+    display: 'none'
   },
   avatar: {
     width: 20,

@@ -158,6 +158,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingLeft: 20,
     paddingRight: 20,
+    display: 'none'
 
   },
   columnimg: {
@@ -239,6 +240,7 @@ const styles = StyleSheet.create({
     marginLeft: (Dimensions.get('window').width - (Dimensions.get('window').width - 50)) / 2,
     marginTop: 10,
     paddingLeft: 10,
+    display: 'none'
   },
   avatar: {
     width: 20,

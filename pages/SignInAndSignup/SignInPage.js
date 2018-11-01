@@ -6,6 +6,8 @@ import { Text, Button, View, StyleSheet, TouchableOpacity, Switch, Dimensions, P
 import Spinner from 'react-native-loading-spinner-overlay';
 import px2dp from '../util/px2dp';
 import utf8 from 'utf8'
+import { NavigationActions, StackActions } from 'react-navigation'
+
 import binaryToBase64 from 'binaryToBase64'
 
 export default class SignInPage extends Component {
@@ -54,7 +56,12 @@ export default class SignInPage extends Component {
                 this.setState({ visible: false })
                 if (responseJson.access_token) {
                     AsyncStorage.setItem('token', responseJson.access_token);
-                    this.props.navigation.navigate('Home', { token: responseJson.access_token })
+                    // this.props.navigation.navigate('Home', { token: responseJson.access_token })
+                    const resetAction = StackActions.reset({
+                        index: 0,
+                        actions: [NavigationActions.navigate({ routeName: 'Home' })],
+                    });
+                    this.props.navigation.dispatch(resetAction);
                 } else {
                     ToastAndroid.show(responseJson.error, ToastAndroid.CENTER, ToastAndroid.CENTER)
                 }
