@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {
-  Platform,
   ScrollView,
   StyleSheet,
   Text,
@@ -14,6 +13,8 @@ import {
   DeviceEventEmitter,
   TouchableOpacity,
   View,
+  Platform,
+  AlertIOS
 } from 'react-native'
 import DateTimePicker from 'react-native-modal-datetime-picker'
 import ImageManage from '../../component/ImagePicker'
@@ -190,10 +191,29 @@ export default class BridgeManage extends Component {
         console.log('response.status', response)
         res = JSON.parse(response._bodyText)
         if (res.IsSuccess) {
-
-          ToastAndroid.show('上传成功', ToastAndroid.CENTER, ToastAndroid.CENTER)
+          if (Platform.OS == 'ios') {
+            AlertIOS.alert(
+              '提示',
+              '上传成功',
+              [
+                { text: '确定', onPress: () => console.log('Foo Pressed!') }
+              ]
+            )
+          } else {
+            ToastAndroid.show("上传成功", ToastAndroid.CENTER, ToastAndroid.CENTER)
+          }
         } else {
-          ToastAndroid.show(res.Message, ToastAndroid.CENTER, ToastAndroid.CENTER)
+          if (Platform.OS == 'ios') {
+            AlertIOS.alert(
+              '提示',
+              res.Message,
+              [
+                { text: '确定', onPress: () => console.log('Foo Pressed!') }
+              ]
+            )
+          } else {
+            ToastAndroid.show(res.Message, ToastAndroid.CENTER, ToastAndroid.CENTER)
+          }
         }
       }
     }, error => {
@@ -386,7 +406,18 @@ export default class BridgeManage extends Component {
       await AsyncStorage.removeItem('StorageBridgeList')
       await AsyncStorage.setItem('BridgeList', JSON.stringify(this.state.bridgeList))
       await AsyncStorage.setItem('StorageBridgeList', JSON.stringify(this.state.storageBridgeList))
-      ToastAndroid.show('保存本地成功', ToastAndroid.CENTER, ToastAndroid.CENTER)
+      if (Platform.OS == 'ios') {
+        AlertIOS.alert(
+          '提示',
+          '保存本地成功',
+          [
+            { text: '确定', onPress: () => console.log('Foo Pressed!') }
+          ]
+        )
+      } else {
+        ToastAndroid.show("保存本地成功", ToastAndroid.CENTER, ToastAndroid.CENTER)
+      }
+
     } catch (error) {
       // Error saving data
     }

@@ -2,7 +2,7 @@
  * Created by wangdi on 4/11/16.
  */
 import React, { Component } from 'react';
-import { Text, Button, View, StyleSheet, TouchableOpacity, Switch, Dimensions, Platform, AsyncStorage, Image, ImageBackground, TextInput, CheckBox, ToastAndroid } from 'react-native';
+import { Text, Button, View, StyleSheet, AlertIOS, TouchableOpacity, Switch, Dimensions, Platform, AsyncStorage, Image, ImageBackground, TextInput, CheckBox, ToastAndroid } from 'react-native';
 import Spinner from 'react-native-loading-spinner-overlay';
 import px2dp from '../util/px2dp';
 import utf8 from 'utf8'
@@ -63,9 +63,19 @@ export default class SignInPage extends Component {
                     });
                     this.props.navigation.dispatch(resetAction);
                 } else {
-                    ToastAndroid.show(responseJson.error, ToastAndroid.CENTER, ToastAndroid.CENTER)
-                }
+                    if (Platform.OS == 'ios') {
+                        AlertIOS.alert(
+                            '提示',
+                            responseJson.error,
+                            [
+                                { text: '确定', onPress: () => console.log('Foo Pressed!') }
+                            ]
+                        )
+                    } else {
+                        ToastAndroid.show(responseJson.error, ToastAndroid.CENTER, ToastAndroid.CENTER)
 
+                    }
+                }
             })
             .catch(error => {
                 console.error(error);
@@ -166,9 +176,9 @@ export default class SignInPage extends Component {
                         </TouchableOpacity>
                     </View>
                 </View>
-                <View style={{ position: 'absolute', left: 0, top: 0, width: '100%', height: '100%' }}>
+                {/* <View style={{ position: 'absolute', left: 0, top: 0, width: '100%', height: '100%' }}>
                     <Spinner style={styles.spinner} visible={this.state.visible} />
-                </View>
+                </View> */}
             </ImageBackground>
         );
     }

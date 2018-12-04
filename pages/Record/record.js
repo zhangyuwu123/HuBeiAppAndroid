@@ -2,7 +2,7 @@
  * Created by wangdi on 4/11/16.
  */
 import React, { Component } from 'react';
-import { Text, Platform, View, ScrollView, Dimensions, StyleSheet, AsyncStorage, ToastAndroid, TouchableOpacity, Image } from 'react-native';
+import { Text, View, ScrollView, Dimensions, StyleSheet, AsyncStorage, ToastAndroid, TouchableOpacity, Image, Platform, AlertIOS } from 'react-native';
 
 export default class Record extends Component {
   constructor(props) {
@@ -141,7 +141,17 @@ export default class Record extends Component {
         } else {
           this._storeData(responseJson.Result)
           this.setState({ loading: false })
-          ToastAndroid.show('更新完成', ToastAndroid.CENTER, ToastAndroid.CENTER)
+          if (Platform.OS == 'ios') {
+            AlertIOS.alert(
+              '提示',
+              '更新完成',
+              [
+                { text: '确定', onPress: () => console.log('Foo Pressed!') }
+              ]
+            )
+          } else {
+            ToastAndroid.show("更新完成", ToastAndroid.CENTER, ToastAndroid.CENTER)
+          }
         }
       })
       .catch(error => {
@@ -164,7 +174,17 @@ export default class Record extends Component {
           this.props.navigation.navigate('Login')
         } else {
           this.storeData(type, responseJson.Result)
-          ToastAndroid.show('更新完成', ToastAndroid.CENTER, ToastAndroid.CENTER)
+          if (Platform.OS == 'ios') {
+            AlertIOS.alert(
+              '提示',
+              '更新完成',
+              [
+                { text: '确定', onPress: () => console.log('Foo Pressed!') }
+              ]
+            )
+          } else {
+            ToastAndroid.show("更新完成", ToastAndroid.CENTER, ToastAndroid.CENTER)
+          }
         }
       })
       .catch(error => {

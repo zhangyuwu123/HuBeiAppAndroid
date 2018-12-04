@@ -5,7 +5,7 @@ export default StyleSheet.create({
     flex: 1,
     ...Platform.select({
       ios: {
-        marginBottom: 72,
+        marginBottom: 0,
       },
     }),
   },

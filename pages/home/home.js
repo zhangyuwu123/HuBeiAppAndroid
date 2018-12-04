@@ -188,6 +188,7 @@ export default class App extends Component {
       makerTime: item.CJSJ,
       makerItem: item
     })
+    return false
   }
   _onMarkerPress = (item) => {
     this.refs.makerContainer.setNativeProps({ display: 'flex' })
@@ -228,8 +229,11 @@ export default class App extends Component {
         console.error(error);
       });
   }
-  pressMap = () => {
-    this.refs.makerContainer.setNativeProps({ display: 'none' })
+  pressMap = (e) => {
+    if (e.nativeEvent.target == 2) {
+      this.refs.makerContainer.setNativeProps({ display: 'none' })
+    }
+    // this.refs.makerContainer.setNativeProps({ display: 'none' })
   }
   _renderItem = ({ item }) => {
     return <Text style={styles.logText}>{item.time} {item.event}: {item.data}</Text>

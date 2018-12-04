@@ -295,7 +295,7 @@ export default class Statistics extends Component {
     let cusNavi = []
     this.state.navis.forEach((item, index) => {
       cusNavi.push(
-        <TouchableOpacity onPress={() => this.getNextSummary(item)}>
+        <TouchableOpacity key={item.XZQHBM} onPress={() => this.getNextSummary(item)}>
           <View>
             <Text style={styles.cusNaviTxt}>  {item.XZQHMC} {(index + 1) < this.state.navis.length ? '>' : ''}</Text>
           </View>
@@ -350,6 +350,7 @@ export default class Statistics extends Component {
 const styles = StyleSheet.create({
   scrollView: {
     flex: 1,
+    height: 500,
   },
   cusNavi: {
     display: 'flex',
@@ -407,7 +408,6 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
   },
   zt: {
-    fontSize: 16,
     width: 100,
     alignItems: 'center'
   },

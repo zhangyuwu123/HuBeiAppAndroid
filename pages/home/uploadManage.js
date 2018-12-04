@@ -18,7 +18,9 @@ import {
   AsyncStorage,
   CheckBox,
   TouchableOpacity,
-  ToastAndroid
+  ToastAndroid,
+  Platform,
+  AlertIOS
 } from 'react-native';
 
 export default class UploadManage extends Component {
@@ -173,8 +175,17 @@ export default class UploadManage extends Component {
       }
     }
     this._storeData(this.state.bridgeList)
-
-    ToastAndroid.show("上传成功", ToastAndroid.CENTER, ToastAndroid.CENTER)
+    if (Platform.OS == 'ios') {
+      AlertIOS.alert(
+        '提示',
+        '上传成功',
+        [
+          { text: '确定', onPress: () => console.log('Foo Pressed!') }
+        ]
+      )
+    } else {
+      ToastAndroid.show("上传成功", ToastAndroid.CENTER, ToastAndroid.CENTER)
+    }
   }
   refreshBridgeList() {
     let newArr = this.state.uploadList.concat(this.state.unUploadList)
@@ -223,12 +234,19 @@ export default class UploadManage extends Component {
 
           } else {
             console.log(res._bodyText, path)
-            ToastAndroid.show("上传图片失败！", ToastAndroid.CENTER, ToastAndroid.CENTER)
-
+            if (Platform.OS == 'ios') {
+              AlertIOS.alert(
+                '提示',
+                '上传图片失败！',
+                [
+                  { text: '确定', onPress: () => console.log('Foo Pressed!') }
+                ]
+              )
+            } else {
+              ToastAndroid.show("上传图片失败！", ToastAndroid.CENTER, ToastAndroid.CENTER)
+            }
           }
-
         })
-
       }
     }
 
