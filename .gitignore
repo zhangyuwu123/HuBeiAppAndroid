@@ -30,7 +30,7 @@ Pods/
 Podfile.lock
 local.properties
 *.iml
-
+android/.gradle/
 # node.js
 #
 node_modules/

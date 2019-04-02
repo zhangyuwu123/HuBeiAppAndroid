@@ -169,5 +169,18 @@ export default StyleSheet.create({
       { 'translateX': Dimensions.get('window').width / 2 },
       { 'translateY': Dimensions.get('window').height / 2 }
     ]
+  },
+  location: {
+    position: "absolute",
+    top: 10,
+    right: 5
+  },
+  locationView: {
+    width: 50,
+    height: 50,
+  },
+  locationIcon: {
+    width: 40,
+    height: 40,
   }
 })

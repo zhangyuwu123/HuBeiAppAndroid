@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import {
   Platform,
   ScrollView,
@@ -8,74 +8,78 @@ import {
   FlatList,
   TouchableHighlight,
   TouchableNativeFeedback,
-  View,
-} from 'react-native'
+  View
+} from "react-native";
 
-let Touchable = TouchableHighlight
-if (Platform.OS === 'android') {
-  Touchable = TouchableNativeFeedback
+let Touchable = TouchableHighlight;
+if (Platform.OS === "android") {
+  Touchable = TouchableNativeFeedback;
 }
 
 export default class ResultDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      token: '',
+      token: "",
       bridgeInfo: {},
       parms: {
-        id: '',
-        CJSJ: '',
-        WCZTZ: '',
-        WCZYTZ: '',
-        WCDFZC: '',
-        JGSJ: '',
-        WWCYY: '',
-        BZ: '',
-        Files: ''
+        id: "",
+        CJSJ: "",
+        WCZTZ: "",
+        WCZYTZ: "",
+        WCDFZC: "",
+        JGSJ: "",
+        WWCYY: "",
+        BZ: "",
+        Files: ""
       }
-    }
+    };
   }
   componentDidMount() {
-    let bridgeInfo = this.props.navigation.state.params
-    this.setState({ bridgeInfo: bridgeInfo.bridgeInfo })
+    let bridgeInfo = this.props.navigation.state.params;
+    this.setState({ bridgeInfo: bridgeInfo.bridgeInfo });
   }
   formatTime(date) {
-    const year = date.getFullYear()
-    const month = date.getMonth() + 1
-    const day = date.getDate()
-    const hour = date.getHours()
-    const minute = date.getMinutes()
-    const second = date.getSeconds()
-    return [year, month, day].map(this.formatNumber).join('/') + ' ' + [hour, minute, second].map(this.formatNumber).join(':')
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const hour = date.getHours();
+    const minute = date.getMinutes();
+    const second = date.getSeconds();
+    return (
+      [year, month, day].map(this.formatNumber).join("/") +
+      " " +
+      [hour, minute, second].map(this.formatNumber).join(":")
+    );
   }
 
   formatNumber(n) {
-    n = n.toString()
-    return n[1] ? n : '0' + n
+    n = n.toString();
+    return n[1] ? n : "0" + n;
   }
   getRowStyle(index) {
     if (index % 2 == 0) {
       return {
         flex: 1,
-        flexDirection: 'row',
+        flexDirection: "row",
         height: 40,
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        backgroundColor: '#F8F8F8',
+        justifyContent: "space-around",
+        alignItems: "center",
+        backgroundColor: "#F8F8F8",
         paddingLeft: 10,
-        paddingRight: 10,
-      }
+        paddingRight: 10
+      };
     } else {
       return {
         flex: 1,
-        flexDirection: 'row',
+        flexDirection: "row",
         height: 40,
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        backgroundColor: 'white',
+        justifyContent: "space-around",
+        alignItems: "center",
+        backgroundColor: "white",
         paddingLeft: 10,
-        paddingRight: 10,
-      }
+        paddingRight: 10
+      };
     }
   }
   _renderItem(title, route) {
@@ -85,56 +89,45 @@ export default class ResultDetail extends Component {
           <Text style={styles.itemText}>{title}</Text>
         </View>
       </Touchable>
-    )
+    );
   }
   render() {
     return (
-      <ScrollView style={styles.scrollView} contentContainerStyle={styles.container}>
+      <ScrollView
+        style={styles.scrollView}
+        contentContainerStyle={styles.container}
+      >
         <View style={styles.group}>
-          <View style={styles.TextItem} >
-            <Text>桥梁编码：</Text>
-            <Text>{this.state.bridgeInfo.QLBM}</Text>
-          </View>
           <View style={styles.separator} />
-          <View style={styles.TextItem1} >
-            <Text>桥梁名称：</Text>
-            <Text>{this.state.bridgeInfo.QLMC}</Text>
-          </View>
-          <View style={styles.separator} />
-          <View style={styles.TextItem} >
+          <View style={styles.TextItem}>
             <Text>路线编码：</Text>
             <Text>{this.state.bridgeInfo.LXBM}</Text>
           </View>
           <View style={styles.separator} />
-          <View style={styles.TextItem1} >
+          <View style={styles.TextItem1}>
             <Text>路线名称：</Text>
             <Text>{this.state.bridgeInfo.LXMC}</Text>
           </View>
           <View style={styles.separator} />
-          <View style={styles.TextItem} >
+          <View style={styles.TextItem}>
             <Text>行政区划：</Text>
-            <Text>{this.state.bridgeInfo.XZQH}</Text>
+            <Text>{this.state.bridgeInfo.XZQHMC}</Text>
           </View>
           <View style={styles.separator} />
-          <View style={styles.TextItem1} >
-            <Text>中心桩号：</Text>
-            <Text>{this.state.bridgeInfo.ZXZH}</Text>
-          </View>
-          <View style={styles.separator} />
-          <View style={styles.TextItem} >
-            <Text >总投资</Text>
+          <View style={styles.TextItem1}>
+            <Text>总投资</Text>
             <Text>{this.state.bridgeInfo.WCZTZ}</Text>
           </View>
-          <View style={styles.TextItem1} >
-            <Text >中央投资</Text>
-            <Text >{this.state.bridgeInfo.WCZYTZ}</Text>
+          <View style={styles.TextItem}>
+            <Text>中央投资</Text>
+            <Text>{this.state.bridgeInfo.WCZYTZ}</Text>
           </View>
-          <View style={styles.TextItem} >
-            <Text >地方自筹</Text>
-            <Text >{this.state.bridgeInfo.WCDFZC}</Text>
+          <View style={styles.TextItem1}>
+            <Text>地方自筹</Text>
+            <Text>{this.state.bridgeInfo.WCDFZC}</Text>
           </View>
-          <View style={styles.TextItem1} >
-            <Text >采集时间</Text>
+          <View style={styles.TextItem}>
+            <Text>采集时间</Text>
           </View>
           <View style={styles.group1}>
             <FlatList
@@ -142,87 +135,91 @@ export default class ResultDetail extends Component {
               data={this.state.bridgeInfo.Gcjd}
               extraData={this.state}
               keyExtractor={this._keyExtractor}
-              renderItem={({ item, index }) =>
-                <TouchableOpacity key={item.Id} onPress={() => {
-                  this.props.navigation.navigate('CjsjDetail', { cjsj: item })
-                }} >
-                  <View style={this.getRowStyle(index)} >
-                    <Text >{item.CJSJ}</Text>
+              renderItem={({ item, index }) => (
+                <TouchableOpacity
+                  key={item.Id}
+                  onPress={() => {
+                    this.props.navigation.navigate("CjsjDetail", {
+                      cjsj: item
+                    });
+                  }}
+                >
+                  <View style={this.getRowStyle(index)}>
+                    <Text>{item.CJSJ}</Text>
                   </View>
                 </TouchableOpacity>
-              }
+              )}
             />
           </View>
         </View>
-      </ScrollView >
-    )
+      </ScrollView>
+    );
   }
 }
-
 
 const styles = StyleSheet.create({
   scrollView: {
     ...Platform.select({
       android: {
-        backgroundColor: '#f5f5f5',
-      },
-    }),
+        backgroundColor: "#f5f5f5"
+      }
+    })
   },
   itemContainer: {
     flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
     paddingTop: 10,
     paddingBottom: 10,
     paddingLeft: 30,
-    paddingRight: 30,
+    paddingRight: 30
   },
   flatList: {
-    flex: 1,
+    flex: 1
   },
   container: {
-    paddingBottom: 15,
+    paddingBottom: 15
   },
   group: {
     flex: 1,
 
-    marginTop: 15,
+    marginTop: 15
   },
   item: {
     padding: 15,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff"
   },
   separator: {
     height: StyleSheet.hairlineWidth,
-    backgroundColor: '#eee',
+    backgroundColor: "#eee"
   },
   itemText: {
     fontSize: 16,
-    color: '#424242',
+    color: "#424242"
   },
   TextLabel: {
-    textAlign: 'center',
-    justifyContent: 'center'
+    textAlign: "center",
+    justifyContent: "center"
   },
   TextItem: {
     flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
     paddingLeft: 30,
     paddingRight: 30,
     height: 50,
-    backgroundColor: '#EEEEEE',
+    backgroundColor: "#EEEEEE"
   },
   TextItem1: {
     flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
     paddingLeft: 30,
     paddingRight: 30,
     height: 50,
-    backgroundColor: '#F8F8F8',
-  },
-})
+    backgroundColor: "#F8F8F8"
+  }
+});
