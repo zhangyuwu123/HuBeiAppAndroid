@@ -204,7 +204,7 @@ const StactNavigatorDemo = StackNavigator(
     SearchManage: {
       screen: SearchManageScreen,
       navigationOptions: {
-        headerTitle: "查询信息"
+        headerTitle: "查询信息111"
       }
     },
     StatisticsManage: {
