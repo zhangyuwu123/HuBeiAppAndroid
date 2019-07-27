@@ -27,17 +27,17 @@ export default class Statistics extends Component {
   componentDidMount = async () => {
     let type = this.props.navigation.state.params;
     if (type.type == "dxgc") {
-      this.state.url = "http://demo.d9tec.com/api/app/getdzxsummary?type=1";
+      this.state.url = "http://hb.jgy-tec.com/api/app/getdzxsummary?type=1";
     } else if (type.type == "zxgc") {
-      this.state.url = "http://demo.d9tec.com/api/app/getdzxsummary?type=2";
+      this.state.url = "http://hb.jgy-tec.com/api/app/getdzxsummary?type=2";
     } else if (type.type == "smaqgc") {
-      this.state.url = "http://demo.d9tec.com/api/app/getsmaqsummary";
+      this.state.url = "http://hb.jgy-tec.com/api/app/getsmaqsummary";
     } else if (type.type == "zhfzgc") {
-      this.state.url = "http://demo.d9tec.com/api/app/getzhfzsummary";
+      this.state.url = "http://hb.jgy-tec.com/api/app/getzhfzsummary";
     } else if (type.type == "wqgzgc") {
-      this.state.url = "http://demo.d9tec.com/api/app/getsummariesbyarea";
+      this.state.url = "http://hb.jgy-tec.com/api/app/getsummariesbyarea";
     } else if (type.type == "shxfgc") {
-      this.state.url = "http://demo.d9tec.com/api/app/getshxfsummary";
+      this.state.url = "http://hb.jgy-tec.com/api/app/getshxfsummary";
     } else {
     }
     try {

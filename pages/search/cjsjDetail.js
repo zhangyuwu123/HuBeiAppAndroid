@@ -80,7 +80,7 @@ export default class CjsjDetail extends Component {
       temp.forEach(item => {
         t.push(this.renderItem(item))
         this.state.images.push({
-          url: 'http://demo.d9tec.com' + item.FilePath,
+          url: 'http://hb.jgy-tec.com' + item.FilePath,
           props: {
             headers: '桥梁信息'
           },
@@ -92,7 +92,7 @@ export default class CjsjDetail extends Component {
   renderItem(item) {
     return (
       <TouchableOpacity key={item.Id} onPress={this.viewImg.bind(this, item)} >
-        <Image style={styles.avatar} source={{ uri: 'http://demo.d9tec.com' + item.FilePath }} />
+        <Image style={styles.avatar} source={{ uri: 'http://hb.jgy-tec.com' + item.FilePath }} />
       </TouchableOpacity>
     );
   }

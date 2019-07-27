@@ -124,14 +124,14 @@ const ShxfResultDetailScreen = ({ navigation }) => (
 );
 const StactNavigatorDemo = StackNavigator(
   {
-    Home: {
-      screen: HomeScreen,
+    Login: {
+      screen: LoginScreen,
       navigationOptions: {
         header: null
       }
     },
-    Login: {
-      screen: LoginScreen,
+    Home: {
+      screen: HomeScreen,
       navigationOptions: {
         header: null
       }

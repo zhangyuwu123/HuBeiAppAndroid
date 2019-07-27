@@ -145,7 +145,7 @@ export default class Record extends Component {
   };
   _UpdateBridgeList() {
     this.setState({ loading: true });
-    fetch("http://demo.d9tec.com/api/app/getxfqlxxs", {
+    fetch("http://hb.jgy-tec.com/api/app/getxfqlxxs", {
       method: "POST",
       headers: {
         Authorization: "Bearer  " + this.state.token,
@@ -179,7 +179,7 @@ export default class Record extends Component {
   }
 
   updateBridgeList(type, url, params) {
-    fetch("http://demo.d9tec.com/api/app/" + url, {
+    fetch("http://hb.jgy-tec.com/api/app/" + url, {
       method: "POST",
       headers: {
         Authorization: "Bearer  " + this.state.token,

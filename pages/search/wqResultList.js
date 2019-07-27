@@ -77,7 +77,7 @@ export default class WqResultManage extends Component {
   }
 
   componentDidMount() {
-    this.state.url = "http://demo.d9tec.com/api/app/wqgzsearchwithpagination";
+    this.state.url = "http://hb.jgy-tec.com/api/app/wqgzsearchwithpagination";
 
     let defaultXmnf = 2015;
     for (let i = 1; i <= 4; i++) {
@@ -181,7 +181,7 @@ export default class WqResultManage extends Component {
       return (
         <Image
           style={styles.columnimg}
-          source={{ uri: "http://demo.d9tec.com" + path }}
+          source={{ uri: "http://hb.jgy-tec.com" + path }}
         />
       );
     } else {
@@ -236,7 +236,9 @@ export default class WqResultManage extends Component {
           <Text style={styles.CJSJ}>{this.formatDate(item.CJSJ)}</Text>
         </View>
         <View style={styles.zt}>
-          <Text style={styles.ztTxt}>未竣工</Text>
+          <Text style={styles.ztTxt}>
+            {item.IsFinish ? "已竣工" : "未竣工"}
+          </Text>
         </View>
       </View>
     </TouchableOpacity>

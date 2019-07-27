@@ -216,7 +216,7 @@ export default class BridgeManage extends Component {
       formData.append(key, this.state.parms[key]);
     }
     console.log("formData", formData);
-    fetch("http://demo.d9tec.com/api/app/AddQljd", {
+    fetch("http://hb.jgy-tec.com/api/app/AddQljd", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -304,7 +304,7 @@ export default class BridgeManage extends Component {
           name: "image.jpg"
         };
         formData.append("file", file);
-        await fetch("http://demo.d9tec.com/api/app/UploadQlImage?qlxxId=123", {
+        await fetch("http://hb.jgy-tec.com/api/app/UploadQlImage?qlxxId=123", {
           method: "POST",
           headers: {
             "Content-Type": "multipart/form-data;charset=utf-8",
@@ -366,7 +366,7 @@ export default class BridgeManage extends Component {
     formData.append("qlxxId", 143);
     let file = { uri: uri, type: "multipart/form-data", name: "image.jpg" };
     formData.append("file", file);
-    fetch("http://demo.d9tec.com/api/app/UploadQlImage?qlxxId=123", {
+    fetch("http://hb.jgy-tec.com/api/app/UploadQlImage?qlxxId=123", {
       method: "POST",
       headers: {
         "Content-Type": "multipart/form-data;charset=utf-8",

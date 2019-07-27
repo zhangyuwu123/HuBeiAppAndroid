@@ -95,15 +95,15 @@ export default class ResultManage extends Component {
     }
     this.state.type = type.type;
     if (type.type == "dzxgc") {
-      this.state.url = "http://demo.d9tec.com/api/app/dzxsearchwithpagination";
+      this.state.url = "http://hb.jgy-tec.com/api/app/dzxsearchwithpagination";
     } else if (type.type == "smaqgc") {
-      this.state.url = "http://demo.d9tec.com/api/app/smaqsearchwithpagination";
+      this.state.url = "http://hb.jgy-tec.com/api/app/smaqsearchwithpagination";
     } else if (type.type == "zhfzgc") {
-      this.state.url = "http://demo.d9tec.com/api/app/zhfzsearchwithpagination";
+      this.state.url = "http://hb.jgy-tec.com/api/app/zhfzsearchwithpagination";
     } else if (type.type == "wqgzgc") {
-      this.state.url = "http://demo.d9tec.com/api/app/wqgzsearchwithpagination";
+      this.state.url = "http://hb.jgy-tec.com/api/app/wqgzsearchwithpagination";
     } else if (type.type == "shxfgc") {
-      this.state.url = "http://demo.d9tec.com/api/app/shxfsearchwithpagination";
+      this.state.url = "http://hb.jgy-tec.com/api/app/shxfsearchwithpagination";
     } else {
     }
     this._getToken();
@@ -286,7 +286,7 @@ export default class ResultManage extends Component {
       return (
         <Image
           style={styles.columnimg}
-          source={{ uri: "http://demo.d9tec.com" + path }}
+          source={{ uri: "http://hb.jgy-tec.com" + path }}
         />
       );
     } else {

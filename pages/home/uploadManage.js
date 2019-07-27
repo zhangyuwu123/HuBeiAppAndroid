@@ -219,7 +219,7 @@ export default class UploadManage extends Component {
         formData.append('qlxxId', bridgeInfo.ID)
         let file = { uri: item.FilePath, type: 'multipart/form-data', name: 'image.jpg' };
         formData.append("file", file);
-        await fetch('http://demo.d9tec.com/api/app/UploadQlImage?qlxxId=123', {
+        await fetch('http://hb.jgy-tec.com/api/app/UploadQlImage?qlxxId=123', {
           method: 'POST',
           headers: {
             'Content-Type': 'multipart/form-data;charset=utf-8',
@@ -295,7 +295,7 @@ export default class UploadManage extends Component {
       formData.append(key, parms[key]);
     }
     console.log(formData)
-    await fetch('http://demo.d9tec.com/api/app/AddQljd', {
+    await fetch('http://hb.jgy-tec.com/api/app/AddQljd', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

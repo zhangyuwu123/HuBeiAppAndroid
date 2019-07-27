@@ -44,7 +44,7 @@ export default class WqResultManage extends Component {
   }
 
   componentDidMount() {
-    this.state.url = "http://demo.d9tec.com/api/app/smaqsearchwithpagination";
+    this.state.url = "http://hb.jgy-tec.com/api/app/smaqsearchwithpagination";
     this._getToken();
     this.subscription = DeviceEventEmitter.addListener(
       "openSearchPanel",
@@ -190,7 +190,7 @@ export default class WqResultManage extends Component {
       return (
         <Image
           style={styles.columnimg}
-          source={{ uri: "http://demo.d9tec.com" + path }}
+          source={{ uri: "http://hb.jgy-tec.com" + path }}
         />
       );
     } else {

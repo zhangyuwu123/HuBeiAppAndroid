@@ -60,7 +60,7 @@ export default class BridgeList extends Component {
     } catch (error) {}
   };
   _GetBridgeList() {
-    fetch("http://demo.d9tec.com/api/app/getxfqlxxs", {
+    fetch("http://hb.jgy-tec.com/api/app/getxfqlxxs", {
       method: "POST",
       headers: {
         Authorization: "Bearer  " + this.state.token,

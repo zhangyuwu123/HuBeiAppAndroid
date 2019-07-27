@@ -58,7 +58,7 @@ export default class MySettings extends Component {
     } catch (error) {
       this._appendMessage('AsyncStorage error: ' + error.message);
     }
-    fetch("http://demo.d9tec.com/api/app/GetUserInfo", {
+    fetch("http://hb.jgy-tec.com/api/app/GetUserInfo", {
       method: "POST",
       headers: {
         Authorization: "Bearer  " + this.state.token,
@@ -71,7 +71,7 @@ export default class MySettings extends Component {
         } else {
           let userInfo = JSON.parse(response._bodyInit).Result
           this.state.userInfo.nickName = userInfo.NickName
-          this.state.userInfo.avatar = 'http://demo.d9tec.com/Resources/master/' + userInfo.Face
+          this.state.userInfo.avatar = 'http://hb.jgy-tec.com/Resources/master/' + userInfo.Face
           this.setState({ userInfo: this.state.userInfo })
         }
       })

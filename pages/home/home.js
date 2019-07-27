@@ -50,7 +50,7 @@ export default class App extends Component {
     this.locationView = [];
   }
   componentWillMount = async () => {
-    this.state.url = "http://demo.d9tec.com/api/app/getxfqlxxs";
+    this.state.url = "http://hb.jgy-tec.com/api/app/getxfqlxxs";
     try {
       var value = await AsyncStorage.getItem("token");
       if (value) {
@@ -168,7 +168,7 @@ export default class App extends Component {
     } catch (error) {
       this._appendMessage("AsyncStorage error: " + error.message);
     }
-    fetch("http://demo.d9tec.com/api/app/GetUserInfo", {
+    fetch("http://hb.jgy-tec.com/api/app/GetUserInfo", {
       method: "POST",
       headers: {
         Authorization: "Bearer  " + this.state.token,
@@ -182,7 +182,7 @@ export default class App extends Component {
           let userInfo = JSON.parse(response._bodyInit).Result;
           this.state.userInfo.nickName = userInfo.NickName;
           this.state.userInfo.avatar =
-            "http://demo.d9tec.com/Resources/master/" + userInfo.Face;
+            "http://hb.jgy-tec.com/Resources/master/" + userInfo.Face;
         }
       })
       .catch(error => {
@@ -237,7 +237,7 @@ export default class App extends Component {
       }
     }
     this.setState({
-      makerImg: "http://demo.d9tec.com" + makerImg,
+      makerImg: "http://hb.jgy-tec.com" + makerImg,
       makerTitle: item.QLMC,
       makerRouter: item.LXBM,
       makerTime: item.CJSJ,
@@ -250,7 +250,7 @@ export default class App extends Component {
     this.setState({
       makerImg:
         item.Files.length > 0
-          ? "http://demo.d9tec.com" + item.Files[0].FilePath
+          ? "http://hb.jgy-tec.com" + item.Files[0].FilePath
           : "",
       makerTitle: item.QLMC,
       makerRouter: item.LXBM,

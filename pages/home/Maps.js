@@ -44,7 +44,7 @@ export default class Maps extends Component {
     } catch (error) {
       this._appendMessage('AsyncStorage error: ' + error.message);
     }
-    fetch("http://demo.d9tec.com/api/app/GetUserInfo", {
+    fetch("http://hb.jgy-tec.com/api/app/GetUserInfo", {
       method: "POST",
       headers: {
         Authorization: "Bearer  " + this.state.token,
