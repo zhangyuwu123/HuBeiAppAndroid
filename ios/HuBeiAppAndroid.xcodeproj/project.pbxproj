@@ -34,8 +34,8 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* HuBeiAppAndroidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HuBeiAppAndroidTests.m */; };
+		4C11C5C592925A275BC529BD /* libPods-HuBeiAppAndroid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC26C7E793045913713965D /* libPods-HuBeiAppAndroid.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
-		6177F9EC3649363E3DC9F760 /* libPods-HuBeiAppAndroid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 944DC33B0BB364B1425DD530 /* libPods-HuBeiAppAndroid.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		F3EE9B256CF14C28B6C0E4B3 /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AD0BE6AED64B8B99B0A6AB /* libRNImagePicker.a */; };
@@ -334,7 +334,6 @@
 		00E356EE1AD99517003FC87E /* HuBeiAppAndroidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HuBeiAppAndroidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* HuBeiAppAndroidTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuBeiAppAndroidTests.m; sourceTree = "<group>"; };
-		08F83CBF005489FAD2FCCD7C /* Pods-HuBeiAppAndroid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuBeiAppAndroid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HuBeiAppAndroid/Pods-HuBeiAppAndroid.debug.xcconfig"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* HuBeiAppAndroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuBeiAppAndroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -345,6 +344,7 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = HuBeiAppAndroid/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = HuBeiAppAndroid/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		1DC26C7E793045913713965D /* libPods-HuBeiAppAndroid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HuBeiAppAndroid.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* HuBeiAppAndroid-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HuBeiAppAndroid-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* HuBeiAppAndroid-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HuBeiAppAndroid-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -353,9 +353,9 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7A915CFC6C1346F2B8852AB5 /* RNImagePicker.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNImagePicker.xcodeproj; path = "../node_modules/react-native-image-picker/ios/RNImagePicker.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		944DC33B0BB364B1425DD530 /* libPods-HuBeiAppAndroid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HuBeiAppAndroid.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
-		BD62EA944968F97F12A4F131 /* Pods-HuBeiAppAndroid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuBeiAppAndroid.release.xcconfig"; path = "Pods/Target Support Files/Pods-HuBeiAppAndroid/Pods-HuBeiAppAndroid.release.xcconfig"; sourceTree = "<group>"; };
+		DD51E1EEFFEBB227BDC9D20F /* Pods-HuBeiAppAndroid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuBeiAppAndroid.release.xcconfig"; path = "Pods/Target Support Files/Pods-HuBeiAppAndroid/Pods-HuBeiAppAndroid.release.xcconfig"; sourceTree = "<group>"; };
+		F0F4D30E4004C2D6240FF2BF /* Pods-HuBeiAppAndroid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuBeiAppAndroid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HuBeiAppAndroid/Pods-HuBeiAppAndroid.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,7 +385,7 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				F3EE9B256CF14C28B6C0E4B3 /* libRNImagePicker.a in Frameworks */,
-				6177F9EC3649363E3DC9F760 /* libPods-HuBeiAppAndroid.a in Frameworks */,
+				4C11C5C592925A275BC529BD /* libPods-HuBeiAppAndroid.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +493,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		13A6784D33C04F75DCA25FFC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0F4D30E4004C2D6240FF2BF /* Pods-HuBeiAppAndroid.debug.xcconfig */,
+				DD51E1EEFFEBB227BDC9D20F /* Pods-HuBeiAppAndroid.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* HuBeiAppAndroid */ = {
 			isa = PBXGroup;
 			children = (
@@ -534,7 +543,7 @@
 			isa = PBXGroup;
 			children = (
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
-				944DC33B0BB364B1425DD530 /* libPods-HuBeiAppAndroid.a */,
+				1DC26C7E793045913713965D /* libPods-HuBeiAppAndroid.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -546,15 +555,6 @@
 				5E9157351DD0AC6500FF2AA8 /* libRCTAnimation.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		6BBFB50179E540A63A37FF85 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				08F83CBF005489FAD2FCCD7C /* Pods-HuBeiAppAndroid.debug.xcconfig */,
-				BD62EA944968F97F12A4F131 /* Pods-HuBeiAppAndroid.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		78C398B11ACF4ADC00677621 /* Products */ = {
@@ -604,7 +604,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				8E0AFE7A21B60DFE00FA6A38 /* Recovered References */,
-				6BBFB50179E540A63A37FF85 /* Pods */,
+				13A6784D33C04F75DCA25FFC /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -672,12 +672,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "HuBeiAppAndroid" */;
 			buildPhases = (
-				35E412ED997DB93FC14B0CDE /* [CP] Check Pods Manifest.lock */,
+				F5C431586907AED092275C1E /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				918B1DD039D573C717DCBAAB /* [CP] Copy Pods Resources */,
+				FBD650688F3D101C2EA5B7E9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -739,7 +739,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = F2PVL3Z86C;
+						DevelopmentTeam = 648J4UKQ7D;
 						ProvisioningStyle = Automatic;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -1160,7 +1160,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		35E412ED997DB93FC14B0CDE /* [CP] Check Pods Manifest.lock */ = {
+		F5C431586907AED092275C1E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1178,7 +1178,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		918B1DD039D573C717DCBAAB /* [CP] Copy Pods Resources */ = {
+		FBD650688F3D101C2EA5B7E9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1318,7 +1318,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08F83CBF005489FAD2FCCD7C /* Pods-HuBeiAppAndroid.debug.xcconfig */;
+			baseConfigurationReference = F0F4D30E4004C2D6240FF2BF /* Pods-HuBeiAppAndroid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1326,12 +1326,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = F2PVL3Z86C;
+				DEVELOPMENT_TEAM = 648J4UKQ7D;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
 				);
 				INFOPLIST_FILE = HuBeiAppAndroid/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1348,19 +1349,20 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD62EA944968F97F12A4F131 /* Pods-HuBeiAppAndroid.release.xcconfig */;
+			baseConfigurationReference = DD51E1EEFFEBB227BDC9D20F /* Pods-HuBeiAppAndroid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F2PVL3Z86C;
+				DEVELOPMENT_TEAM = 648J4UKQ7D;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
 				);
 				INFOPLIST_FILE = HuBeiAppAndroid/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
