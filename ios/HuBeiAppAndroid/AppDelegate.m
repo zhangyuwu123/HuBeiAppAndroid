@@ -20,8 +20,9 @@
   [AMapServices sharedServices].apiKey = @"e7ff57786d2b283905f1bd1665b3c8bf";
   NSURL *jsCodeLocation;
 
+//  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+//  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
-
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"HuBeiAppAndroid"
                                                initialProperties:nil

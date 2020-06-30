@@ -27,6 +27,7 @@ end
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|
+      targets_to_ignore = %w(React yoga)
     if target.name == "React"
       target.remove_from_project
     end

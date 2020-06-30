@@ -148,6 +148,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-amap3d')
     compile project(':react-native-image-picker')
     compile project(':react-native-amap3d')
     compile fileTree(dir: "libs", include: ["*.jar"])

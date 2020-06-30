@@ -3,6 +3,7 @@ package com.hubeiappandroid;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import cn.qiuxiang.react.amap3d.AMap3DPackage;
 import com.imagepicker.ImagePickerPackage;
 import cn.qiuxiang.react.amap3d.AMap3DPackage;
 import com.facebook.react.ReactNativeHost;
@@ -25,6 +26,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new AMap3DPackage(),
             new ImagePickerPackage(),
             new AMap3DPackage()
       );
