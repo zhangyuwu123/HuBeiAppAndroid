@@ -352,8 +352,6 @@ const styles = StyleSheet.create({
   item: {
     flex: 1,
     marginTop: 15,
-    flexDirection: "row",
-    justifyContent: "center",
     alignItems: "center"
   },
   btnmargin: {
@@ -361,7 +359,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#E5E5E5",
     width: 110,
     height: 40
   },

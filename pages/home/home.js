@@ -336,7 +336,7 @@ export default class App extends Component {
               source={require("../images/icon-search2.png")}
             />
             <Text style={styles.text}>查询</Text>
-          </View>
+          </View> 
         </TouchableOpacity>
         <View style={styles.myItem}>
           <TouchableOpacity style={styles.tpAvatar} onPress={this.onMySettings}>
